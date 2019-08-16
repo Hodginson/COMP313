@@ -52,4 +52,12 @@ The Process and the main challenges:
     learn how to use raycasts in order for the playable character to find if an enemy is in range. While these worked  it was not great as both the player and the enemys could attack constantly so I
     ended up using a timer to stop this however, I hindsight a coroutine would have been a better way to do this.
     
+    After getitng all of this working the developmment of the health system of both the player and the enemies as well as health pickups was poretty simple. Linking the health system to the UI
+    for the player was also quite simple along with the addition of an exp bar and having both update. The next challange came when implementing the wave system, this was an interesting one as 
+    it was quite difficult to get going at first and the method used was quite rough and will need a fair bit of refinement if this game progresses as it own't be efficient to hard code every enemy in 
+    each level. THe final big challenge was in getting the slam attack to work. This was difficult as it took a fair bit of time to figure out why the enemies werent moving when the action was performed.
+    htis came down to the isKinematic feature in their rigibody being set to true. Once disabling this I had to mess around with their mass and drag as they would act like they were on ice when the force was
+    applied. Jumping also became a problem during this as I didn't have a good way of checking it the player was on the ground. For this I also had to use raycasts to see how far from the ground the player was.
     
+    Some features that we were hoping to add didn't end up making it in due to both time constraints and not being able to figure out how to use them. These features that would have a big impact on how the
+    player interacts with the game are a block feature, a stun featue (especially for the slam) and the implementation of items and collectable weapons.
