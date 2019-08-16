@@ -1,8 +1,8 @@
 # COMP313 Prototype
 
 Game Loop:
-The game loop and all of the inputs are currently handled in the player movement field. At the moment it accepts the following user inputs: WASD or the arrow keys for movement, Space for jump
-and CTRL or left mouse button for attack. 
+    The game loop and all of the inputs are currently handled in the player movement field. At the moment it accepts the following user inputs: WASD or the arrow keys for movement, Space for jump
+    and CTRL or left mouse button for attack. 
 
 
 Game Flow:
