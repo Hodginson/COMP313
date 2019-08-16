@@ -2,8 +2,9 @@
 
 Game Loop:
 
-    The game loop and all of the inputs are currently handled in the player movement field. At the moment it accepts the following user inputs: WASD or the arrow keys for movement, Space for jump
-    and CTRL or left mouse button for attack. 
+    The game loop and all of the inputs are currently handled in the playerMov script. At the moment it accepts the following user inputs: WASD or the arrow keys for movement, Space for jump
+    and CTRL or left mouse button for attack. In this script it handles all the user inputs, processes them, calls functions from other scripts for things such as picking up an item and damaging an enemy
+    and it is where the check is to see if the the game is ready to move onto the next wave.
 
 
 Game Flow:
@@ -23,6 +24,12 @@ Asset store Links:
     ground materials fd free - https://assetstore.unity.com/packages/2d/textures-materials/floors/ground-materials-fd-free-140364
     Knight sprite sheet free - https://assetstore.unity.com/packages/2d/characters/knight-sprite-sheet-free-93897
 
+Setup Instructions:
+    
+    If you are using the prebuilt version then it is ready to launch and jump straight in. I would not recommend loading it into unity as some objects may need to be reassigned in the inspector however these
+    are pretty easy to find . most will require you to either drag the player(frenchie) into them if it is anything to do with player health, movement or just the player. if it is after the enemy the same thing applys 
+    but with the cat prefab. if it is after a slider these can be found under the canvas in the hud object. If it throws an error saying input axis horizontal or vertical is not set up 
+    this requires you to Edit > Project Setting > Input and change Keyboard Left - Right to horizontal and Keyboard up - down to Vertical (It is case sensitive so be careful).
 Controls: 
 
     Movement:
@@ -61,3 +68,7 @@ The Process and the main challenges:
     
     Some features that we were hoping to add didn't end up making it in due to both time constraints and not being able to figure out how to use them. These features that would have a big impact on how the
     player interacts with the game are a block feature, a stun featue (especially for the slam) and the implementation of items and collectable weapons.
+    
+    One other issue to note is that after building the game there is some noticable problems in the smoothness of the player movement that needs to fixed. I have tried a different method but the new method does not feel right 
+    although it does make it a lot smoother but also make sit feel heavier and like its on ice. if you would like to see this method in the PlayerMov script comment out lines 132-134 and uncomment lines 135-137.
+    You may also want to adjust the speed variable (I would recommend a value of 0.2f)
